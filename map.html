@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+		This file was created using two sets of ArcGIS Maps SDK for JavaScript sample code available from https://developers.arcgis.com:
+		1) Intro to FeatureLayer: https://developers.arcgis.com/javascript/latest/sample-code/layers-featurelayer/
+		2) Access ArcGIS Online items using OAuth 2.0: https://developers.arcgis.com/javascript/latest/sample-code/identity-oauth-basic/	
+		-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Intro to FeatureLayer | Sample | ArcGIS API for JavaScript 4.24</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.24/"></script>
+
+    <style>
+    html,
+    body,
+    #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+    #homeDiv {
+        padding: 12px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        width: 100px;
+        cursor: pointer;
+    }
+    #homeDiv:hover {
+        background-color: #f3f3f3;
+    }      
+    </style>
+
+    <script>
+    require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/layers/FeatureLayer",
+        "esri/identity/OAuthInfo",
+        "esri/identity/IdentityManager"],
+        (Map, MapView, FeatureLayer, OAuthInfo, esriId,) => {
+            your_portal_url = "<your ArcGIS Portal URL>";
+            your_app_id = "<your App ID>";
+            your_fs_service_url = "<your Feature Service URL>";
+
+            const info = new OAuthInfo({
+                portalUrl: your_portal_url,
+                appId: your_app_id,
+                flowType: "auto", 
+                popup: false
+            });
+            esriId.registerOAuthInfos([info]);
+            
+            esriId.checkSignInStatus(info.portalUrl + "/sharing").then(() => {
+                const map = new Map({
+                    basemap: "gray-vector"
+                });
+                
+                const view = new MapView({
+                    container: "viewDiv",
+                    map: map,
+                    extent: {
+                        xmin: -180,
+                        ymin: -90,
+                        xmax: 180,
+                        ymax: 90,
+                        spatialReference: 4326
+                    }
+                });
+                
+                const featureLayer = new FeatureLayer({
+                    url: your_fs_service_url
+                });
+                map.add(featureLayer);
+                view.ui.add("homeDiv", "top-right");
+
+                document.getElementById("homeDiv").addEventListener("click", () => {
+                    esriId.destroyCredentials();
+                    window.location = "/";
+                });
+            })
+            .catch(() => {
+                esriId.getCredential(info.portalUrl + "/sharing");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="viewDiv"></div>
+    <div id="homeDiv" class="esri-widget">Home</div>
+</body>
+</html>
