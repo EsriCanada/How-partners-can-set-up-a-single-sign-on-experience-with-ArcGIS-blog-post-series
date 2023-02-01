@@ -145,7 +145,7 @@
     and the same file after being editted.  Please note, the text below is a single line regardless of how appears in the Markdown editor.
 
     ```
-    -----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlzzj6QkuEqnThoi5qTvr\n7baPvvPRQO08FVolVZ1XtPDwZUx6r4rOWaOuEdi8IKlkLyh5HjSHbYVE8PqJZ+2x\nVoq11rW4zQOf8zf6wM3nkn3AjrIgg1cBt51r5B9vnBsjjI7a2lWFS9ITY9scEtyu\nNT8Pxu20FuNAalb4vh5drRCZpufrwHtyFaanDLmcCGaPnnGuM5AU4ZynDqrS46Dp\nLFHWp1wb+/WU/Ix1LtC8UeO0gXyObMFARnA5L+XPYqESzjDxZ1mQrTMuXoVTo7Nm\ntclbeEWgMBytllsWnYg1UuWfvAfwt38YstlSy62VFo6002UUygXD/DLvxwJhN/3T\nAwIDAQAB\n-----END PUBLIC KEY-----\n
+    -----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlzzj6QkuEqnThoi5qTvr\n7baPvvPRQO08FVolVZ1XtPDwZUx6r4rOWaOuEdi8IKlkLyh5HjSHbYVE8PqJZ+2x\nVoq11rW4zQOf8zf6wM3nkn3AjrIgg1cBt51r5B9vnBsjjI7a2lWFS9ITY9scEtyu\nLFHWp1wb+/WU/Ix1LtC8UeO0gXyObMFARnA5L+XPYqESzjDxZ1mQrTMuXoVTo7Nm\ntclbeEWgMBytllsWnYg1UuWfvAfwt38YstlSy62VFo6002UUygXD/DLvxwJhN/3T\n\nNT8Pxu20FuNAalb4vh5drRCZpufrwHtyFaanDLmcCGaPnnGuM5AU4ZynDqrS46DpAwIDAQAB\n-----END PUBLIC KEY-----\n
     ```
 10. Connect to your Auth0 Dashboard.
 > **_NOTE_** To complete the next set of steps you will need to know your Auth0 Single Page Application's Client ID.
