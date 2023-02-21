@@ -215,7 +215,7 @@
 >  - [Access ArcGIS Online items using OAuth 2.0](https://developers.arcgis.com/javascript/latest/sample-code/identity-oauth-basic/) 
 
 1.  Create a new file called `map.html` in the `/01-login/public` folder of the Auth0 Sample App.
-2.  Navigate to the map.html file on [GitHub] (https://github.com/EsriCanada/How-partners-can-set-up-a-single-sign-on-experience-with-ArcGIS-blog-post-series/blob/main/map.html).
+2.  Navigate to the map.html file on [GitHub](https://github.com/EsriCanada/How-partners-can-set-up-a-single-sign-on-experience-with-ArcGIS-blog-post-series/blob/main/map.html).
 3.  Copy raw contents and paste to your map.html file in /01-login/public.
 4.  In ArcGIS Enterprise, under the `Content` tab, click on your web app then click the `Settings` tab.
 5.  Under Web Mapping Application, click `Registered Info`.
@@ -254,7 +254,7 @@
 
 ## Part 4: Disable the default ArcGIS Enterprise login screen
 
-> **_NOTE:_** Before completing these steps, ensure that at least one Auth0 user is assigned the Administrator role in ArcGIS Enterprise. If an Auth0 user is not assigned as an administrator, portal administration will need to be performed programmatically. For more information on how to create an Auth0 user, review the Auth0 help topic [Create Users] (https://auth0.com/docs/manage-users/user-accounts/create-users).
+> **_NOTE:_** Before completing these steps, ensure that at least one Auth0 user is assigned the Administrator role in ArcGIS Enterprise. If an Auth0 user is not assigned as an administrator, portal administration will need to be performed programmatically. For more information on how to create an Auth0 user, review the Auth0 help topic [Create Users](https://auth0.com/docs/manage-users/user-accounts/create-users).
 
 1.  Log into your ArcGIS Enterprise as an administrator.
 2.  Under the `Organization` tab, go to `Members`. Ensure that there is at least one member in the ArcGIS Enterprise organization with an Administrator role and that the user also has an existing account in Auth0. 
